@@ -7,7 +7,18 @@ import { LoginComponent } from './login/login.component';
 import { SignUpComponent } from './sign-up/sign-up.component';
 import { HomeComponent } from './home/home.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import   {Amplify, Auth } from 'aws-amplify';
 
+
+Amplify.configure({
+  Auth:{
+    mandatorySignIn: true,
+    region: 'us-east-2',
+    userPoolId:'us-east-2_Bm9CTWtJp',
+    userPoolWebClientId:'2gvgamragun37ji48ldofeonne',
+    authenticationFlowType:'USER_PASSWORD_AUTH'
+  }
+})
 @NgModule({
   declarations: [
     AppComponent,

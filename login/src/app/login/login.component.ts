@@ -20,6 +20,7 @@ export class LoginComponent implements OnInit {
       var tokens = user.signInUserSession;
       if(tokens != null){
         alert("User logeed successfully")
+        localStorage.setItem('token', tokens);
         this.router.navigate(["home"])
       }
     }catch(error){
