@@ -1,0 +1,11 @@
+<h2>Login</h2>
+<form  >
+  <label for="username">Username:</label>
+  <input type="text" id="username" name="username" [(ngModel)]="username" required><br><br>
+  
+  <label for="password">Password:</label>
+  <input type="password" id="password" name="password" [(ngModel)]="password" required><br><br>
+  
+  <button (click)="doLogin()">Login</button>
+</form>
+<p> Not a memeber? <a href="/sign-up"> Sign Up now</a></p>
